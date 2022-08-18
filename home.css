@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Darker+Grotesque&family=Lexend+Deca:wght@300&family=Roboto:wght@300&display=swap');
+
+:root {
+    /* --backgroundColor: #2e2529; */
+    --backgroundColor: #9CD8CC;
+    --headerColor: #281F20;
+    --accentColor: #94B4A4;
+    --grayishWhite: #ECE9F1;
+    --progressBar: #9CDC9C;
+    --twitterButton: #41C8F5;
+    --facebookButton: #335AA6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgroundColor);
+    font-family: 'Lexend Deca', sans-serif;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/* //////// HOME INDEX //////// */
+
+header{
+    background-color: var(--headerColor);
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px;
+    padding: 28px;
+    border-top-right-radius: 20px;
+    position: relative;
+}
+
+header::after{
+    display: none;
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 0px;
+    width: 100%;
+    height: 8px;
+    background: rgb(156,215,203);
+    background: linear-gradient(90deg, rgba(156,215,203,1) 31%, rgba(15,222,158,1) 62%);
+}
+    
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    ;
+    gap: 41px;
+    justify-content: space-between;    
+}
+
+
+.movie-container {
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    width: 302px;
+    height: 163px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+
+.movie-container-anchor{
+    transition: all .5s;
+    border-radius: 20px;
+}
+.movie-container-anchor:link,
+.movie-container-anchor:visited{
+    text-decoration: none;
+    color: inherit;
+}
+.movie-container-anchor:hover{
+    box-shadow: 0 0 10px 1px var(--headerColor);
+    transform: translateY(5px);
+}
+
+.info-side {
+    height: inherit;
+    background-color: var(--accentColor);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 12px;
+    position: relative;
+}
+.info-side h3, h5{ 
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.info-side p {
+    color: var(--grayishWhite);
+    font-size: 12px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+}
+
+
+.check{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+.check-space{
+    background-color: var(--grayishWhite);
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+.star-rate{
+    display: flex;
+    padding-top: 10px;
+}
+
+ /* //////// LOGIN INDEX ////////  */
+
+ .login-main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./EqRuMFNXMAI5aii.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 41px;
+    gap: 41px;
+    justify-content: space-evenly; 
+ }
+
+.loginScreenTitle{
+    color: var(--grayishWhite);
+    width: 225px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 36px;
+    position: relative;
+}
+form input{
+    width: 302px;
+    height: 39px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--grayishWhite);
+    padding-left: 40px;
+    outline-color: #9CDC9C;
+}
+
+#user {
+    position: absolute;
+    top: 28px;
+    left: 44px;
+}
+#password{
+    position: absolute;
+    top: 87px;
+    left: 44px;
+}
+form button{
+    width: 101px;
+    height: 39px;
+    background-color: var(--headerColor);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    margin-top: 40px;
+}
+
+.social-network{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.social-network button{
+    border: none;
+    border-radius: 20px;
+    width: 302px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 7px;
+    color: white;
+
+}
+.facebook-button{
+    background-color: var(--facebookButton);
+}
+
+.twitter-button{
+    background-color: var(--twitterButton);
+}
+
+/* //////// FILM WATCHED //////// */
+
+.main-film-watched{
+    width: 100vw;
+    height: 100vh;
+    gap: 41px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-ratingbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+}
+.film-paragraph{
+    display: flex;
+    flex-direction: column;
+}
+.image-ratingbox p {
+    padding-top: 40px;
+}
+
+.image-ratingbox a{
+    align-self: end;
+}
+
+.title-year-check{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    padding: 0px 50px;
+}
+
+/* //////// ACCOUNT SCREEN //////// */
+.account-main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    gap: 90px;
+    padding-top: 23px;
+}
+.account-main {
+    font-size: 25px;
+}
+.progress-bar{
+    display: flex;
+    flex-direction: column;
+}
+.scoresNpasswords{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    
+
+}
+
+.scoresNpasswords a {
+    color: var(--grayishWhite);
+}
+
+.progress-bar{
+    display: flex;
+    flex-direction: column;
+}
+.progress-bar h5 {
+    font-size: 15px;
+}
+.progress-bar h3{
+    font-size: 20x;
+    align-self: center;
+}
+
+#progress-bar{
+    width: 308px;
+    height: 43px;
+    background-color: var(--grayishWhite);
+    border-radius: 1.5em;
+    margin: 10px -5px;
+    position: relative;
+
+}
+
+#progress-bar::before{
+    content: "";
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    bottom: 7px;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 10px;
+    max-width: calc(100% - 20px);
+    background-color: var(--progressBar);
+    border-radius: 1.5em;
+}
+
+/* //////// SEARCH BAR //////// */
+.search-click{
+    --size: 30px;
+    display: flex;
+    transition: all .3s ease-in-out;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    height: 30px;
+    width: var(--size);
+}
+.search-click button{
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.search-click input{
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--grayishWhite);
+    border: 0;
+    outline: none;
+    opacity: 1;
+    padding-left: 3px;
+    padding-right: 3px;
+    flex-grow: 1;
+    opacity: 0;
+    width: 1px;
+}
+
+.search-click:focus-within{
+    width: 50vw;
+}
+.search-click input:focus-within{
+    opacity: 1;
+}
+.search-click button:focus-within{
+    pointer-events: none;
+}
+
+/* //////// SORT BY //////// */
+
+.toggle-buttons{
+    display: flex;
+    width: 100%;
+    padding: 0 40px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--grayishWhite);
+}
+.toggle-buttons button{
+    padding: 3px 10px;
+    background: transparent;
+    border: 2px solid var(--grayishWhite);
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    color: var(--grayishWhite);
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.sortby-box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.select-button{
+    position: relative;
+}
+.classification{
+    position: absolute;
+    right: 70px;
+    top: 126px;
+    z-index: 10;
+    font-size: smaller;
+    background-color: var(--accentColor);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 7px;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+}
+.classification li{
+    list-style-type: none;
+}
+.classification li:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sortby-box > .select-button:focus-within + .classification {
+    opacity: 1;
+    
+}
+
+
+.ascendant-descendant{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ascendant{
+    border-radius: 20px;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3);
+}
+.ascendant:active{
+    box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.3) inset;
+}
+.descendant{
+    border-radius: 20px;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3);
+}
+.descendant:active{
+    box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.3) inset;
+}
+
